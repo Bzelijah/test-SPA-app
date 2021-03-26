@@ -1,9 +1,9 @@
 .Header-P{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: green;
+  background-color:#6FA33C;
 }
 
 .Header-P-item{
@@ -13,10 +13,22 @@
 .Header-P-container{
   display: flex;
   flex-direction: row;
+  margin-left: 17vh;
+
 }
 
 .Header-Img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin-right: 17.5vh;
+}
+
+@media (min-width: 1900px ){
+  .Header-Img{
+  margin-right: 17vh;
+  }
+  .Header-P-container{
+  margin-left: 16vh;
+}
 }

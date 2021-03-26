@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Users from './Components/Users/Users';
+import AllUsers from './Components/AllUsers/AllUsers';
 import Posts from './Components/Posts/Posts';
 import Header from './Components/Header/Header';
 
@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path='/'>
-            <Users />
+            <AllUsers />
           </Route>
           <Route exact path='/posts'>
             <Posts />
