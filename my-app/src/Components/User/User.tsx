@@ -1,7 +1,13 @@
 import './User.css';
+import { useHistory } from 'react-router-dom';
 
-const User = (user: any) => {
-  user = user.user;
+const User = (props: any) => {
+  const { user } = props;
+  const history = useHistory();
+
+  const handlerClick = (id: string) => {
+    history.push(`/posts/user_id=${id}`)
+  }
 
   return (
     <div className="users-item-container">
@@ -17,7 +23,7 @@ const User = (user: any) => {
       </div>
       <div className="item-div-img-button">
         <img className="users-item-img" src="https://wmpics.pics/dm-0FXF.jpg" alt="" />
-        <button className="item-btn">View posts</button>
+        <button onClick={() => { handlerClick(user.id) }} className="item-btn">View posts</button>
       </div>
     </div>
   )

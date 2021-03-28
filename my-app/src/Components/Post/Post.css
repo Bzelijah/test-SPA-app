@@ -1,0 +1,32 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #EEFBE4;
+  background-color: #FFFFFF;
+  width: 79vw;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 1.5vh;
+}
+
+.p-text-container {
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.user-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.post-author {
+  color: gray;
+  font-size: 14px;
+}
+
+.post-title {
+  font-size: 32px;
+  font-weight: 500;
+}

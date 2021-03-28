@@ -1,5 +1,7 @@
 body {
   background-color:#EEFBE4;
+  /* padding: 0 calc(20px - (100vw - 100%)) 0 0; */
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 .App {

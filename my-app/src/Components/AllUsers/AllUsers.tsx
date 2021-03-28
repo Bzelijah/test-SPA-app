@@ -1,13 +1,14 @@
 import './AllUsers.css';
 import { useSelector } from 'react-redux';
+import { IInitState } from '../../Store/initState';
 import User from '../User/User';
 
 const AllUsers = () => {
-  const users: any = useSelector(state => state);
+  const users: Array<Object> = useSelector((state: IInitState) => state.users);
 
   return (
     <div className="users-container">
-      {users.users.map((el: any, index: number) =>
+      {users.map((el: Object, index: number) =>
         <User key={index} user={el} />
       )}
     </div>

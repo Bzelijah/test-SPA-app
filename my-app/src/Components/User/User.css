@@ -2,14 +2,14 @@
   display: flex;
   background-color:white;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 3%;
+  justify-content: space-between;
   width: 25vw;
   height: 18vh;
-  border: 1px solid black;
+  border: 1px solid #EEFBE4;
   border-radius: 15px;
-  padding: 10px;
-  margin-left: 2.5vw;
+  padding: 9px 10.05px 10px;
+  margin-left: 1.5vh;
+  margin-top: 1.5vh;
 }
 
 .item-div-text {
@@ -28,6 +28,7 @@
 
 .item-fullname {
   font-size: 24px;
+  font-weight: bolder;
 }
 
 .item-username {
