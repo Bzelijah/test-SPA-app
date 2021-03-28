@@ -1,7 +1,23 @@
 export interface IInitState {
-  users: any[];
-  posts: any[];
+  users: Array<Object>;
+  posts: Array<{
+    author: string;
+    title: string;
+    content: string;
+    authorID: string;
+    comments: Array<string>;
+  }>;
+  currentPost: ICurrentPost;
+  showComments: boolean;
 };
+
+export interface ICurrentPost {
+  title: string;
+  author: string;
+  content: string;
+  comments: Array<string>;
+  authorID: string;
+}
 
 const initState: IInitState = {
   users: [
@@ -44,6 +60,7 @@ const initState: IInitState = {
       title: 'Post1',
       content: 'contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontententcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentc',
       authorID: '1',
+      comments: ['1', '2', '3'],
     },
     {
       author: 'Nastya',
@@ -51,20 +68,31 @@ const initState: IInitState = {
       content: `Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview
 New Paragraph of Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Po... `,
       authorID: '4',
+      comments: ['1', '2', '3', '4'],
     },
     {
       author: 'Igrik',
       title: 'Post2',
       content: 'contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent',
       authorID: '1',
+      comments: ['1'],
     },
     {
       author: 'Valery',
       title: 'Post1',
       content: 'contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent',
       authorID: '3',
+      comments: ['commentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcomment', '2', '3'],
     },
-  ]
+  ],
+  currentPost: {
+    title: '',
+    author: '',
+    content: '',
+    comments: [],
+    authorID: '',
+  },
+  showComments: false,
 }
 
 export default initState;

@@ -1,0 +1,20 @@
+.info-comment-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-item-btn {
+  background-color:#6FA33C;
+  border-radius: 15px;
+  color: white;
+  height: 25px;
+  width: 100px;
+  border: none;
+  font-size: 10px;
+  outline: 0 !important;
+}
+
+.comments-span {
+  font-size: 20px;
+  font-weight: 500;
+}
