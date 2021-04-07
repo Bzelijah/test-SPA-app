@@ -5,16 +5,18 @@ export interface IInitState {
     title: string;
     content: string;
     authorID: string;
+    id: string;
     comments: Array<string>;
   }>;
   currentPost: ICurrentPost;
-  showComments: boolean;
+  writeNewComment: boolean;
 };
 
 export interface ICurrentPost {
   title: string;
   author: string;
   content: string;
+  id: string;
   comments: Array<string>;
   authorID: string;
 }
@@ -60,6 +62,7 @@ const initState: IInitState = {
       title: 'Post1',
       content: 'contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontententcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentc',
       authorID: '1',
+      id: '1',
       comments: ['1', '2', '3'],
     },
     {
@@ -68,6 +71,7 @@ const initState: IInitState = {
       content: `Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview
 New Paragraph of Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Post Body Preview Preview Po... `,
       authorID: '4',
+      id: '2',
       comments: ['1', '2', '3', '4'],
     },
     {
@@ -75,6 +79,7 @@ New Paragraph of Post Body Preview Post Body Preview Post Body Preview Post Body
       title: 'Post2',
       content: 'contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent',
       authorID: '1',
+      id: '3',
       comments: ['1'],
     },
     {
@@ -82,6 +87,7 @@ New Paragraph of Post Body Preview Post Body Preview Post Body Preview Post Body
       title: 'Post1',
       content: 'contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent',
       authorID: '3',
+      id: '4',
       comments: ['commentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcommentcomment', '2', '3'],
     },
   ],
@@ -90,9 +96,10 @@ New Paragraph of Post Body Preview Post Body Preview Post Body Preview Post Body
     author: '',
     content: '',
     comments: [],
+    id: '',
     authorID: '',
   },
-  showComments: false,
+  writeNewComment: false,
 }
 
 export default initState;
