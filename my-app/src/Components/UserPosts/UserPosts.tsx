@@ -14,11 +14,6 @@ const UserPosts = () => {
 
   const postsCurrentUser = posts.filter((el: any) => el.authorID === id.id ? el : null);
 
-  console.log(id.id);
-  console.log(postsCurrentUser);
-
-
-
   return (
     <div className="posts-container">
       {postsCurrentUser.length > 0 ? postsCurrentUser.map((el: Object, index: number) =>

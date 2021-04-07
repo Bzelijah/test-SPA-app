@@ -22,8 +22,6 @@ const Comments = () => {
 
   const handlerSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(currentPost);
-
     dispatch(addComment(comment, currentPost.id));
     dispatch(addCommentInCurrentPost(comment));
     dispatch(writeNewComment(false));
